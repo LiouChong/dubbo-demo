@@ -2,18 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <parent>
         <groupId>com.dubbo-study</groupId>
         <artifactId>dubbo-study</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-
     <groupId>com.dubbo-demo</groupId>
-    <artifactId>common-interface</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>common-interface</name>
+    <artifactId>dubbo-consumer</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>dubbo-consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,6 +19,23 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.dubbo-demo</groupId>
+            <artifactId>common-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <!-- 引入spring-boot-starter以及dubbo和curator的依赖 -->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
 
     </dependencies>
 

@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>com.dubbo-demo</groupId>
-    <artifactId>common-interface</artifactId>
-    <version>1.0-SNAPSHOT</version>
-    <name>common-interface</name>
+    <artifactId>dubbo-provider</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>dubbo-provider</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -21,7 +21,18 @@
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>com.dubbo-demo</groupId>
+            <artifactId>common-interface</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
 
+        <!-- 引入spring-boot-starter以及dubbo和curator的依赖 -->
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>dubbo-spring-boot-starter</artifactId>
+            <version>0.2.0</version>
+        </dependency>
     </dependencies>
 
     <build>
